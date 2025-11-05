@@ -1,19 +1,28 @@
 {
-  "name": "emailserver",
+  "name": "renahem-website",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Rena Hem & Kontorsservice - Professional cleaning company website",
+  "main": "server/server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node server/server.js",
+    "dev": "nodemon server/server.js",
+    "test": "echo \"No tests specified yet\" && exit 0"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "cleaning",
+    "website",
+    "contact-form",
+    "sendgrid"
+  ],
+  "author": "Rena Hem & Kontorsservice",
   "license": "ISC",
   "dependencies": {
     "@sendgrid/mail": "^8.1.6",
     "cors": "^2.8.5",
     "dotenv": "^17.2.3",
-    "express": "^5.1.0",
-    "nodemailer": "^7.0.9"
+    "express": "^5.1.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
   }
 }

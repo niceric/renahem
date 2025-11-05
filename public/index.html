@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rena Hem & Kontorsservice - Professionell Städning</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts - Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="bg-gray-50">
+
+    <!-- SVG Clip Path Definitions -->
+    <svg class="absolute w-0 h-0">
+        <defs>
+            <clipPath id="cloud-clip" clipPathUnits="objectBoundingBox">
+                <path d="M 0,0 H 1 V 0.8 C 0.95,0.95 0.85,0.7 0.75,0.8 C 0.65,0.9 0.55,0.7 0.45,0.8 C 0.35,0.95 0.2,0.75 0.1,0.85 C 0.05,0.9 0,0.8 0,0.75 Z"></path>
+            </clipPath>
+        </defs>
+    </svg>
+
+    <!-- Header -->
+    <header id="cloud-header" class="fixed top-0 left-0 right-0 z-50 bg-white shadow-lg">
+        <nav class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <div>
+                <img src="images/renahem.png" alt="Rena Hem Logo" class="h-10 md:h-14">
+            </div>
+            <div class="hidden md:flex space-x-8">
+                <a href="#hero" class="text-gray-700 hover:text-brand-blue font-semibold transition duration-200">Hem</a>
+                <a href="#services" class="text-gray-700 hover:text-brand-blue font-semibold transition duration-200">Våra Tjänster</a>
+                <a href="#about" class="text-gray-700 hover:text-brand-blue font-semibold transition duration-200">Om Oss</a>
+                <a href="#contact" class="text-gray-700 hover:text-brand-blue font-semibold transition duration-200">Kontakt</a>
+            </div>
+            <div class="md:hidden">
+                <button class="text-gray-700 hover:text-brand-blue focus:outline-none">
+                    <svg id="menu-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden fixed top-0 left-0 w-full h-full bg-white z-40 pt-24">
+        <div class="flex flex-col items-center space-y-6 mt-8">
+            <a href="#hero" class="text-xl text-gray-800 hover:text-brand-blue font-semibold">Hem</a>
+            <a href="#services" class="text-xl text-gray-800 hover:text-brand-blue font-semibold">Våra Tjänster</a>
+            <a href="#about" class="text-xl text-gray-800 hover:text-brand-blue font-semibold">Om Oss</a>
+            <a href="#contact" class="text-xl text-gray-800 hover:text-brand-blue font-semibold">Kontakt</a>
+        </div>
+    </div>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="relative w-full h-screen flex items-center justify-center overflow-hidden bg-brand-light-blue">
+            <div id="hero-bg" class="absolute inset-0 bg-cover bg-center opacity-30" style="background-image: url('https://images.unsplash.com/photo-1581578731548-c64695cc6952?ixlib=rb-4.0.3&id=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto-format&fit=crop&w=1770&q=80')"></div>
+
+            <div class="relative z-10 flex flex-col items-center w-full px-4 pt-24 md:pt-0">
+                <div class="w-10/12 md:w-1/2 max-w-3xl">
+                    <img src="images/renahem.png" alt="Rena Hem & Kontorsservice" class="w-full h-auto">
+                </div>
+            </div>
+
+            <div id="wipe-overlay" class="absolute inset-0 z-20"></div>
+
+            <div class="wave-divider h-18">
+                <svg class="block w-full h-full" viewBox="0 0 1440 150" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+                    <path class="wave-fill" d="M0,50 C120,150 240,-50 360,50 C480,150 600,-50 720,50 C840,150 960,-50 1080,50 C1200,150 1320,-50 1440,50 L1440,150 L0,150 Z"></path>
+                </svg>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="pt-24 pb-0 bg-white relative -mt-2">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-4xl font-bold text-brand-blue mb-4">Våra Tjänster</h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto mb-16">Vi erbjuder skräddarsydda städlösningar för både privatpersoner och företag. Alltid med kvalitet och miljö i fokus.</p>
+
+                <!-- Price Calculator -->
+                <div id="price-calculator" class="relative z-10 mb-20 bg-gray-50/70 backdrop-blur-sm p-6 md:p-8 rounded-xl shadow-xl w-full max-w-md lg:max-w-4xl mx-auto text-center border border-gray-200 lg:flex lg:flex-row lg:items-center">
+                    <div class="lg:w-1/2 lg:pr-8 lg:text-left">
+                        <h3 class="text-xl md:text-2xl font-bold text-brand-blue mb-4">Prisindikation Hemstädning</h3>
+                        <p class="text-gray-600 text-sm md:text-base mb-6">Ange din boyta (kvm) för ett uppskattat pris efter RUT-avdrag.</p>
+
+                        <div class="mb-4 lg:mb-0">
+                            <label for="kvm-input" class="form-label text-left">Din boyta (kvm)</label>
+                            <input type="number" id="kvm-input" class="form-input text-center text-lg" placeholder="t.ex. 75" min="0">
+                        </div>
+                    </div>
+
+                    <div class="mt-6 lg:mt-0 lg:w-1/2 lg:pl-8 lg:border-l lg:border-gray-200">
+                        <div class="mb-4">
+                            <p class="text-base md:text-lg text-gray-700">Uppskattat pris:</p>
+                            <div id="price-output" class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-brand-blue transition-all duration-300">0 kr</div>
+                            <p class="text-xs md:text-sm text-gray-500">(efter RUT-avdrag)</p>
+                        </div>
+
+                        <div id="building-blocks-container" class="w-full h-20 lg:h-24 flex items-end justify-center gap-1 border-t border-gray-200 pt-3"></div>
+                        <p class="text-xs text-gray-400 mt-2">Priset baseras på ca 1 timme (150 kr) per 25 kvm. Minsta debitering är 150 kr. Tiden kan variera beroende på bostadens skick.</p>
+                    </div>
+                </div>
+
+                <!-- Service Cards -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-12 pb-20">
+                    <div class="service-card flex flex-col items-center p-8 bg-white rounded-xl shadow-xl hover:shadow-2xl transition-shadow duration-300 transform hover:-translate-y-2">
+                        <div class="service-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                                <polyline points="9 22 9 12 15 12 15 22"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-semibold text-gray-800 mb-3">Hemstädning</h3>
+                        <p class="text-gray-600">Låt oss ta hand om städningen så du får tid över till annat. Vi anpassar oss efter dina behov och önskemål.</p>
+                    </div>
+
+                    <div class="service-card flex flex-col items-center p-8 bg-white rounded-xl shadow-xl hover:shadow-2xl transition-shadow duration-300 transform hover:-translate-y-2">
+                        <div class="service-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M18 20V10"/>
+                                <path d="M12 20V4"/>
+                                <path d="M6 20V14"/>
+                                <path d="M2 22h20"/>
+                                <path d="M4 14.48V8a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v6.48M4 18h16"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-semibold text-gray-800 mb-3">Kontorsservice</h3>
+                        <p class="text-gray-600">En ren och fräsch arbetsplats ökar trivseln och produktiviteten. Vi ser till att ert kontor alltid är representativt.</p>
+                    </div>
+
+                    <div class="service-card flex flex-col items-center p-8 bg-white rounded-xl shadow-xl hover:shadow-2xl transition-shadow duration-300 transform hover:-translate-y-2">
+                        <div class="service-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M12 2a10 10 0 1 0 10 10H12V2Z"/>
+                                <path d="M22 12A10 10 0 0 0 12 2v10Z"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-semibold text-gray-800 mb-3">Fönsterputs</h3>
+                        <p class="text-gray-600">Vi ger dig skinande rena fönster utan ränder. Njut av utsikten med vår professionella fönsterputsning.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="wave-divider-bottom">
+                <svg class="block w-full h-18" viewBox="0 0 1440 150" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+                    <path class="wave-fill-bottom" d="M0,50 C120,150 240,-50 360,50 C480,150 600,-50 720,50 C840,150 960,-50 1080,50 C1200,150 1320,-50 1440,50 L1440,150 L0,150 Z"></path>
+                </svg>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="pt-24 pb-24 bg-brand-light-blue -mt-2">
+            <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+                <div class="rounded-xl shadow-2xl overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1528605248644-14dd04022da1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto-format&fit=crop&w=1770&q=80" alt="Glatt städteam" class="w-full h-full object-cover">
+                </div>
+
+                <div class="text-center md:text-left">
+                    <h2 class="text-4xl font-bold text-brand-blue mb-6">Vilka är Rena Hem?</h2>
+                    <p class="text-lg text-gray-700 mb-4">
+                        Rena Hem & Kontorsservice är din lokala och pålitliga städpartner. Vi grundades med en enkel vision: att göra vardagen enklare och renare för våra kunder.
+                    </p>
+                    <p class="text-lg text-gray-700 mb-4">
+                        Vårt team består av erfarna och noggranna medarbetare som sätter kunden i främsta rummet. Vi använder miljövänliga produkter och moderna metoder för att garantera ett skinande rent resultat – varje gång.
+                    </p>
+                    <a href="#contact" class="inline-block mt-4 px-8 py-3 bg-brand-blue text-white font-bold rounded-lg shadow-lg transform transition-transform duration-200 hover:bg-blue-800 hover:-translate-y-1">
+                        Begär en fri offert
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="pt-24 pb-48 bg-white relative">
+            <div class="container mx-auto px-6">
+                <div class="max-w-3xl mx-auto">
+                    <h2 class="text-4xl font-bold text-brand-blue text-center mb-4">Kontakta Oss</h2>
+                    <p class="text-lg text-gray-600 text-center max-w-xl mx-auto mb-12">
+                        Har du frågor eller vill du boka en städning? Fyll i formuläret nedan så återkommer vi så snart vi kan.
+                    </p>
+
+                    <!-- Contact Form -->
+                    <form id="contact-form" class="bg-white p-8 md:p-12 rounded-xl shadow-xl space-y-0">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" class="form-field" placeholder="Ditt namn" required>
+                            <label for="name" class="form-field-label">Ditt namn</label>
+                        </div>
+
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" class="form-field" placeholder="Din e-post" required>
+                            <label for="email" class="form-field-label">Din e-post</label>
+                        </div>
+
+                        <div class="form-group">
+                            <input type="tel" id="phone" name="phone" class="form-field" placeholder="Telefonnummer (frivilligt)">
+                            <label for="phone" class="form-field-label">Telefonnummer (frivilligt)</label>
+                        </div>
+
+                        <div class="form-group">
+                            <textarea id="message" name="message" rows="5" class="form-field form-field-textarea" placeholder="Ditt meddelande" required></textarea>
+                            <label for="message" class="form-field-label">Ditt meddelande</label>
+                        </div>
+
+                        <div class="pt-4">
+                            <button type="submit" class="submit-btn">
+                                Skicka meddelande
+                            </button>
+                        </div>
+                    </form>
+
+                    <!-- Success Message -->
+                    <div id="form-success" class="hidden mt-6 p-6 bg-green-50 border border-green-200 rounded-xl text-center">
+                        <svg class="w-16 h-16 text-green-600 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                        <h3 class="text-2xl font-bold text-green-700 mb-2">Tack för ditt meddelande!</h3>
+                        <p class="text-green-600">Vi återkommer till dig inom kort.</p>
+                    </div>
+
+                    <!-- Error Message -->
+                    <div id="form-error" class="hidden mt-6 p-6 bg-red-50 border border-red-200 rounded-xl text-center">
+                        <svg class="w-16 h-16 text-red-600 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                        <h3 class="text-2xl font-bold text-red-700 mb-2">Ett fel uppstod</h3>
+                        <p class="text-red-600"></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="wave-divider h-18" style="z-index: 1;">
+                <svg class="block w-full h-full" viewBox="0 0 1440 150" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+                    <path style="fill: #1f2937;" d="M0,50 C120,150 240,-50 360,50 C480,150 600,-50 720,50 C840,150 960,-50 1080,50 C1200,150 1320,-50 1440,50 L1440,150 L0,150 Z"></path>
+                </svg>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-gray-300 pb-12 relative pt-8 -mt-2">
+        <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left relative z-10">
+            <div>
+                <img src="images/renahem.png" alt="Rena Hem Logo" class="h-16 mb-4 mx-auto md:mx-0 filter grayscale brightness-200 invert">
+                <p class="text-sm">Professionell städning för hem och kontor. Vi gör din vardag renare och enklare.</p>
+            </div>
+
+            <div>
+                <h4 class="font-bold text-white text-lg mb-3">Länkar</h4>
+                <ul class="space-y-2">
+                    <li><a href="#services" class="hover:text-white">Våra Tjänster</a></li>
+                    <li><a href="#about" class="hover:text-white">Om Oss</a></li>
+                    <li><a href="#contact" class="hover:text-white">Kontakt & Offert</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="font-bold text-white text-lg mb-3">Kontakta Oss</h4>
+                <ul class="space-y-2">
+                    <li>E-post: info@renahem.se</li>
+                    <li>Telefon: 012-345 67 89</li>
+                    <li>Adress: Storgatan 1, 123 45 Staden</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="container mx-auto px-6 text-center text-sm text-gray-500 mt-12 border-t border-gray-700 pt-8">
+            &copy; 2025 Rena Hem & Kontorsservice. Alla rättigheter förbehållna.
+        </div>
+    </footer>
+
+    <!-- Custom JavaScript -->
+    <script src="js/main.js"></script>
+</body>
+</html>
