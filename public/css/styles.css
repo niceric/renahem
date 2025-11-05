@@ -1,0 +1,274 @@
+/* Rena Hem & Kontorsservice - Main Stylesheet */
+
+/* Base Styles */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f0f9ff;
+    color: #1f2937;
+}
+
+/* Brand Colors */
+:root {
+    --brand-blue: #1e4a89;
+    --brand-light-blue: #e0f2fe;
+}
+
+.text-brand-blue {
+    color: var(--brand-blue);
+}
+
+.bg-brand-blue {
+    background-color: var(--brand-blue);
+}
+
+.bg-brand-light-blue {
+    background-color: var(--brand-light-blue);
+}
+
+/* Header Cloud Design */
+#cloud-header {
+    clip-path: url(#cloud-clip);
+    padding-bottom: 2.5rem;
+    margin-bottom: -1.5rem;
+}
+
+/* Hero Window Wipe Animation */
+#wipe-overlay {
+    animation: wipeReveal 2s ease-out 1s forwards;
+    clip-path: circle(150% at 50% 50%);
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(8px);
+}
+
+@keyframes wipeReveal {
+    0% {
+        clip-path: circle(150% at 50% 50%);
+        opacity: 1;
+    }
+    100% {
+        clip-path: circle(0% at 50% 50%);
+        opacity: 0;
+    }
+}
+
+/* Wave Section Dividers */
+.wave-divider {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+    line-height: 0;
+    margin-top: -0px;
+}
+
+.wave-divider svg {
+    position: relative;
+    display: block;
+    width: 100%;
+}
+
+.wave-divider .wave-fill {
+    fill: #ffffff;
+}
+
+.wave-divider-bottom {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    margin-top: -1px;
+}
+
+.wave-divider-bottom svg {
+    position: relative;
+    display: block;
+    width: 100%;
+}
+
+.wave-divider-bottom .wave-fill-bottom {
+    fill: var(--brand-light-blue);
+}
+
+/* Form Input Styles */
+.form-input {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1px solid #d1d5db;
+    border-radius: 0.5rem;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    color: #1f2937;
+    transition: all 0.2s;
+}
+
+.form-input::placeholder {
+    color: #9ca3af;
+}
+
+.form-input:focus {
+    outline: none;
+    ring: 2px;
+    ring-color: #3b82f6;
+}
+
+.form-label {
+    display: block;
+    text-align: left;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    font-weight: 600;
+    color: #374151;
+    margin-bottom: 0.25rem;
+}
+
+.submit-btn {
+    width: 100%;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    background-color: var(--brand-blue);
+    color: #ffffff;
+    font-weight: 700;
+    border: none;
+    border-radius: 0.5rem;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    transform: translateY(0);
+    transition-property: transform, background-color;
+    transition-duration: 200ms;
+    cursor: pointer;
+}
+
+.submit-btn:hover {
+    background-color: #1e40af;
+    transform: translateY(-0.25rem);
+}
+
+.submit-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* Service Icons */
+.service-icon {
+    width: 4rem;
+    height: 4rem;
+    background-color: var(--brand-light-blue);
+    color: var(--brand-blue);
+    border-radius: 9999px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    margin-bottom: 1rem;
+}
+
+/* Price Calculator Building Blocks Animation */
+#building-blocks-container .block {
+    width: 20px;
+    background-color: var(--brand-blue);
+    border-radius: 4px 4px 0 0;
+    animation: growUp 0.5s ease-out forwards;
+    transform-origin: bottom;
+    opacity: 0;
+}
+
+@keyframes growUp {
+    0% {
+        transform: scaleY(0);
+        opacity: 0;
+    }
+    100% {
+        transform: scaleY(1);
+        opacity: 1;
+    }
+}
+
+/* Service Cards Animation */
+.service-card {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.service-card.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Parallax Effect on Hero Image */
+#hero-bg img {
+    transition: transform 0.1s linear;
+}
+
+/* Modern Floating Label Contact Form */
+.form-group {
+    position: relative;
+    margin-bottom: 1.5rem;
+}
+
+.form-field {
+    width: 100%;
+    padding: 1.5rem 1rem 0.5rem 1rem;
+    background-color: #f3f4f6;
+    border-bottom-width: 2px;
+    border-color: #d1d5db;
+    border-top: 1px solid #d1d5db;
+    border-left: 1px solid #d1d5db;
+    border-right: 1px solid #d1d5db;
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+    color: #1f2937;
+    transition: border-color 0.3s ease-in-out;
+}
+
+.form-field::placeholder {
+    color: transparent;
+}
+
+.form-field:focus {
+    outline: none;
+    border-color: var(--brand-blue);
+}
+
+.form-field-textarea {
+    min-height: 120px;
+}
+
+.form-field-label {
+    position: absolute;
+    left: 1rem;
+    top: 1rem;
+    color: #6b7280;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    transition: all 0.3s ease-in-out;
+    pointer-events: none;
+}
+
+.form-field:focus + .form-field-label,
+.form-field:not(:placeholder-shown) + .form-field-label {
+    transform: translateY(-0.75rem) scale(0.75);
+    color: var(--brand-blue);
+}
+
+.form-field:not(:placeholder-shown) {
+    color: #1f2937;
+}
+
+/* Loading Spinner */
+.spinner {
+    border: 3px solid #f3f4f6;
+    border-top: 3px solid var(--brand-blue);
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    animation: spin 1s linear infinite;
+    display: inline-block;
+    margin-right: 0.5rem;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
