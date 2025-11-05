@@ -1,7 +1,10 @@
 // Rena Hem & Kontorsservice - Main JavaScript
 
 // API Configuration
-const API_URL = 'http://localhost:3000/api/send-email';
+// In production, use relative URL (same domain). In development, use localhost.
+const API_URL = window.location.hostname === 'localhost'
+    ? 'http://localhost:3000/api/send-email'
+    : '/api/send-email';
 
 // Initialize Lucide icons
 lucide.createIcons();
