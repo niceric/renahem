@@ -87,9 +87,9 @@ contactForm.addEventListener('submit', async function(e) {
             formErrorMessage.classList.remove('hidden');
         }
     } catch (error) {
-        // Network error or server not reachable
+        // Network error or server not reachable error code 110
         console.error('Error sending email:', error);
-        formErrorMessage.textContent = 'Kunde inte ansluta till servern. Kontrollera att servern körs och försök igen.';
+        formErrorMessage.textContent = 'Kunde inte skicka meddelandet. Försök igen senare. Felkod: 110';
         formErrorMessage.classList.remove('hidden');
     } finally {
         // Re-enable button and restore text
